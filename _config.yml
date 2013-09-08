@@ -1,0 +1,4 @@
+name: A SICP Walkthrough
+markdown: redcarpet
+pygments: true
+baseurl: "/sicp"
