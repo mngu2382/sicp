@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Chapter 1: Exerices 1.9 -- 1.10 "
+title: Exerices 1.9 -- 1.10 
+categories: chapter1
 mathjax: true
 ---
 

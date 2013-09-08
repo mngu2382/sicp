@@ -18,7 +18,7 @@
   
   <body>
     <header id="banner">
-      <h1><a href="http://mngu2382.github.io">:testSite <strong>a work in progress</strong></a></h1>
+      <h1><a href="/">:testSite <strong>a work in progress</strong></a></h1>
       <nav><ul>
         <li><a href="{{ site.baseurl }}/index.html">{{ site.name }}</a></li>
       </ul></nav>
@@ -30,15 +30,20 @@
 
     <aside>
       <h2>Contents</h2>
-      <ul>
-        {% for post in site.posts reversed %}
-          {% if page.title == post.title %}
-            <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
-          {% else %}
-            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      {% for cat in site.cat_list %}
+        <h4>{{ cat[1] }}</h4>
+        <ul>
+          {% for post in site.posts reversed %}
+            {% if post.categories[0] == cat[0] %}
+              {% if page.title == post.title %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+              {% else %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </aside>
 
     <footer>

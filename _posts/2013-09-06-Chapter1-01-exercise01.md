@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Chapter 1: Exerices 1.6 -- 1.8 "
+title: Exerices 1.6 -- 1.8
+categories: chapter1
 mathjax: true
 ---
 
@@ -102,7 +103,7 @@ On the other end of the scale: for large enough `x`, due to the nature
 of floating point arithmetic, `guess` may not be significant to the
 same level of the tolerance. This would lead to the comparison in
 `good-enough?` to always evalute to true causing an indefinite loop
-in `square-iter`. For example, again with a tolerance of `0.001', the
+in `square-iter`. For example, again with a tolerance of 0.001, the
 following expression does not finish evaluating:
 
 {% highlight scheme %}

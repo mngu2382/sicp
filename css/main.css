@@ -21,7 +21,7 @@ body {
     color: #000;
     font-size: 90%; /* Base font size: 14px */
     font-family: "helvetica neue",calibri,arial,sans-serif;
-    line-height: 1.5;
+    line-height: 1.7;
     max-width: 660px;
     min-width: 300px;
     margin: 0 auto;
@@ -157,7 +157,7 @@ code, pre {
     color: #222;
     background-color: #fbfbfb;
     border: 1px solid #ccc;
-    font-size: 0.9em;
+    font-size: 90%;
     padding: 2px 4px;
 }
 

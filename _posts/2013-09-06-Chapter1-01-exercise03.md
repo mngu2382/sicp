@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Chapter 1: Exerices 1.11 -- 1.13"
+title: Exerices 1.11 -- 1.13
+categories: chapter1
 mathjax: true
 ---
 
@@ -9,7 +10,7 @@ A function $f$ is defined by the rule that
 
 $$
 f(n) = \begin{cases}
-  n & \text{if $n<3$}\\\\
+  n & \text{if $n\lt 3$}\\\\
   f(n-1)+2f(n-2)+3f(n-3) & \text{if $n\ge3$}
   \end{cases}
 $$
