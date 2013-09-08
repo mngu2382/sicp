@@ -1,4 +1,4 @@
 name: A SICP Walkthrough
 markdown: redcarpet
 pygments: true
-baseurl: "/sicp"
+baseurl: "http://mngu2382.github.io/sicp"
