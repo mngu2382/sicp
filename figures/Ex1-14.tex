@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.multipart}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}%
+  [level 1/.style={sibling distance=70mm},
+   level 2/.style={sibling distance=60mm},
+   level 3/.style={sibling distance=30mm},
+   level 4/.style={sibling distance=25mm},
+   every node/.style={rectangle, draw=black,
+     fill=gray!10, minimum size=6mm,
+     rounded corners=1mm,
+     font=\ttfamily\small,
+     inner xsep=0.5em, inner ysep=0.5em}]
+\node {(cc 11 3)}
+  child {node {(cc 11 2)}
+    child {node {(cc 11 1)}
+      child {node {(cc 11 0)}
+        child {node {0}}}
+      child {node {(cc 10 1)}
+        child {node {(cc 10 0)}
+          child {node {0}}}
+        child {node {(cc 9 1)}
+          child {node {\vdots}
+            child {node {1}}}}}}
+    child {node {(cc 6 2)}
+      child {node {(cc 6 1)}
+        child {node {\vdots}
+          child {node {1}}}}
+      child {node {(cc 1 2)}
+         child {node {\vdots}
+          child {node {1}}}}}}
+  child {node {(cc 1 3)}
+    child {node {\vdots}
+      child {node {1}}}};
+\end{tikzpicture}
+\end{preview}
+\end{document}
