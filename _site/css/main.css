@@ -152,12 +152,12 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-code, pre {
+code, pre  {
     color: #222;
     background-color: #fbfbfb;
     border: 1px solid #ccc;
     font-family: Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;
-    font-size: 90%;
+    font-size: 95%;
     padding: 2px 4px;
 }
 
@@ -206,3 +206,15 @@ blockquote {
     font-size: .95em;
     font-style: italic;   
 }
+
+table {
+    margin: 0 auto;
+    font-size: 90%;
+}
+thead, tbody {
+    border:1px solid #000;
+}
+th, td {
+    padding: 0.1em 0.5em;
+}
+
