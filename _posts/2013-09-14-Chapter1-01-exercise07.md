@@ -519,7 +519,7 @@ $$
 $$
 
 This is roughly the case when we compare times for tests of primes near
-$10^12$ with primes near $10^6$.
+$10^{12}$ with primes near $10^6$.
 
 #### Exercise 1.25
 Alyssa P. Hacker complaind that we went to a lot of extra work in
