@@ -4,6 +4,5 @@ baseurl: "/sicp"
 permalink: none
 
 # Custom variables
-cat_list: { gettingStarted: "Getting started",
-            chapter1: "Chapter 1",
+cat_list: { chapter1: "Chapter 1",
             chapter2: "Chapter 2" }

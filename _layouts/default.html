@@ -28,7 +28,8 @@
       {{ content }}
     </section>
 
-    <aside>
+    <aside id="aside-content">
+    {% if site.cat_list %}
       {% for cat in site.cat_list %}
         <h4>{{ cat[1] }}</h4>
         <ul>
@@ -43,6 +44,15 @@
           {% endfor %}
         </ul>
       {% endfor %}
+    {% else %}
+      {% for post in site.posts reversed %}
+        {% if page.title == post.title %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+        {% else %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     </aside>
 
     <footer>
