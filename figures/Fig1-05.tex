@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}%
+  [level 1/.style={sibling distance=70mm},
+   level 2/.style={sibling distance=35mm},
+   level 3/.style={sibling distance=20mm},
+   level 4/.style={sibling distance=15mm},
+   level distance=15mm,
+   every node/.style={font=\ttfamily\small},
+   edge from parent path={
+     (\tikzparentnode.south) .. controls +(0, -0.5) and +(0, 0.5)
+                             .. (\tikzchildnode.north)}]
+\node {fib 5}
+  child {node {fib 4}
+    child {node {fib 3}
+      child {node {fib 2}
+        child {node {fib 1}
+          child[level distance=8mm] {node {1}}}
+        child {node {fib 0}
+          child[level distance=8mm] {node {0}}}}
+      child {node {fib 1}
+        child[level distance=8mm] {node {1}}}}
+    child {node {fib 2}
+      child {node {fib 1}
+        child[level distance=8mm] {node {1}}}
+      child {node {fib 0}
+        child[level distance=8mm] {node {0}}}}}
+  child {node {fib 3}
+    child {node {fib 2}
+      child {node {fib 1}
+        child[level distance=8mm] {node {1}}}
+      child {node {fib 0}
+        child[level distance=8mm] {node {0}}}}
+    child {node {fib 1}
+      child[level distance=8mm] {node {1}}}};
+\end{tikzpicture}
+\end{preview}
+\end{document}
