@@ -13,7 +13,7 @@ process as the amount to be changed increases.
 
 ##### Solution
 
-![The "counting change" process]({{ site.baseurl }}/images/sicp/Ex1-14.png 'The "counting change" process')
+![The "counting change" process]({{ site.baseurl }}/images/Ex1-14.png 'The "counting change" process')
 
 #### Exercise 1.15
 The sine of an angle (in radians) can be computed by making use of
