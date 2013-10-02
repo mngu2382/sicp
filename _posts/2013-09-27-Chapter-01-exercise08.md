@@ -1,12 +1,12 @@
 ---
-title: Exercise 1.29 -- 1.33
+title: Exercises 1.29 -- 1.33
 layout: post
 categories: chapter1
 mathjax: true
 ---
 
 #### Exercise 1.29
-Simpson's Rule is a more accurate method of numerical integration than
+Simpson's rule is a more accurate method of numerical integration than
 the method illustrated above (i.e. the sum the areas of a series of
 rectangular boxes of width $dx$. Using Simpson's Rule, the integral of
 a function $f$ between $a$ and $b$ is approximated as
@@ -17,7 +17,7 @@ $$
 
 where $h=(b-a)/n$, for some even integer $n$, and $y_k=f(a+kh)$. Define
 a procedure that takes as arguments $f$, $a$, $b$, and $n$ and returns
-the value of the integral, computed using Simpson's Rules. Use your
+the value of the integral, computed using Simpson's rule. Use your
 procedure to integrate `cube` between 0 and 1 with $n=100$ and
 $n=1000$, and compare the results to those of the integral procedure
 shown above.
@@ -59,7 +59,8 @@ Implementing Simpson's rule and evaluating the integral of $x^3$
 #### Exercise 1.30
 The `sum` procedure above generates a linear recursion. The procedure
 can be rewritten so that the sum is performed iteratively. Show how to
-this by filling in the missing expressions in the following definition:
+do this by filling in the missing expressions in the following
+definition:
 {% highlight scheme %}
 (define (sum term a next b)
     (define (iter a result)
@@ -82,10 +83,10 @@ this by filling in the missing expressions in the following definition:
 #### Exercise 1.31
 1. The `sum` procedure is only the simplest of a vast number of similar
    abstractions that can be captured as higher-order procedures. Write
-   an analogous procedure called \texttt{product} that returns the
+   an analogous procedure called `product` that returns the
    product of the values of a function at points over a given range.
    Show how to define `factorial` in terms of `product`. Also use
-   product to compute approximations to $\pi$ using the formula
+   `product` to compute approximations to $\pi$ using the formula
 
    $$
    \frac{\pi}{4}=\frac{2\cdot 4\cdot 4\cdot 6\cdot 6\cdot 8\ldots}{3\cdot 3\cdot 5\cdot 5\cdot 7\cdot 7\ldots}
