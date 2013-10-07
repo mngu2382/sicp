@@ -128,7 +128,7 @@ $\log(1) = 0$.)
 1. An infinite _continued fraction_ is an expression of the form
 
    $$
-   f=\frac{N_1}{D_1 + \frac{N_2}{D_2 + \frac{N_3}{D_3 + \ldots}}}.
+   f=\frac{N_1}{D_1 + \frac{N_2}{D_2 + \frac{N_3}{D_3 + \dotsb}}}.
    $$
    
    As an example, one can show that the infinite continued fraction
@@ -214,7 +214,7 @@ A continued fraction representation of the tangent function was
 published in 1770 by the German mathematician J.H. Lambert:
 
 $$
-\tan x = \frac{x}{1-\frac{x^2}{3 - \frac{x^2}{5 - \ldots}}}
+\tan x = \frac{x}{1-\frac{x^2}{3 - \frac{x^2}{5 - \dotsb}}}
 $$
 
 where $x$ is in radians. Define a procedure `(tan-cf x k)` that
