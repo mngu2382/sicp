@@ -221,3 +221,17 @@ th, td {
 #aside-content ul {
     list-style: none;
 }
+
+.hide, .hidethis{
+    display: none;
+}
+.show:active + .hide, .show:focus + .hide {
+    display: inline;
+}
+.show:active, .show:focus {
+    display: none;
+}
+.show:active ~ .hidethis, .show:focus ~ .hidethis {
+    display: inline;
+}
+
