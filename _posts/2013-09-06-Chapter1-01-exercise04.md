@@ -15,6 +15,9 @@ process as the amount to be changed increases.
 
 ![The "counting change" process]({{ site.baseurl }}/images/Ex1-14.png 'The "counting change" process')
 
+_Tikz code for image on
+[GitHub](https://github.com/mngu2382/sicp/blob/master/figures/Ex1-14.tex)._
+
 #### Exercise 1.15
 The sine of an angle (in radians) can be computed by making use of
 the approximation $\sin x\approx x$ if $x$ is sufficiently small, and
