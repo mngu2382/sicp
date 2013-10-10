@@ -43,57 +43,8 @@ What value is returned by
 {% endhighlight %}
 We see that `inc` has been evaluated $((2^2)^2)^2=16$ times. This can be
 shown using the substitution model -- the full parenthetical nightmare
-can be expanded below:
-
-<a name="hide?"> </a>
-<a class="show" href="#hide?">[+]</a>
-<a class="hide" href="#hide?">[-]</a>
-<div class="hidethis">
-{% highlight scheme %}
-(((double (double double)) inc) 5)
-
-(((lambda (x) ((double double) ((double double) x))) inc) 5)
-
-(((lambda (x) ((lambda (x) (double (double x)))
-               ((lambda (x) (double (double x))) x))) inc) 5)
-
-(((lambda (x) ((lambda (x) (double (double x)))
-               (double (double x)))) inc) 5)
-
-(((lambda (x) (double (double (double (double x))))) inc) 5)
-
-((double (double (double (double inc)))) 5)
-
-((double (double (double (lambda (x) (inc (inc x)))))) 5)
-
-((double (double (lambda (x) ((lambda (x) (inc (inc x)))
-                              ((lambda (x) (inc (inc x))) x))))) 5)
-
-((double (double (lambda (x) ((lambda (x) (inc (inc x)))
-                              (inc (inc x)))))) 5)
-
-((double (double (lambda (x) (inc (inc (inc (inc x))))))) 5)
-
-((double (lambda (x) ((lambda (x) (inc (inc (inc (inc x)))))
-                      ((lambda (x) (inc (inc (inc (inc x))))) x)))) 5)
-
-((double (lambda (x) ((lambda (x) (inc (inc (inc (inc x)))))
-                      (inc (inc (inc (inc x))))))) 5)
-
-((double (lambda (x) (inc (inc (inc (inc (inc (inc (inc (inc x)))))))))) 5)
-
-((lambda (x) ((lambda (x) (inc (inc (inc (inc (inc (inc (inc (inc x)))))))))
-              ((lambda (x) (inc (inc (inc (inc (inc (inc (inc (inc x)))))))))
-               x))) 5)
-
-((lambda (x) ((lambda (x) (inc (inc (inc (inc (inc (inc (inc (inc x)))))))))
-              (inc (inc (inc (inc (inc (inc (inc (inc x)))))))))) 5)
-
-((lambda (x) (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc x))))))))))))))))) 5)
-
-(inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc (inc 5))))))))))))))))
-{% endhighlight %}
-</div>
+can be found on
+[Github](https://github.com/mngu2382/sicp/blob/master/fragments/Ex1-41.scm).
  
 <a name="Ex1.42"> </a>
 #### Exercise 1.42
