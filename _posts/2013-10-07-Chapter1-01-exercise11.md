@@ -41,10 +41,9 @@ What value is returned by
 (((double (double double)) inc) 5)
 ; 21
 {% endhighlight %}
-We see that `inc` has been evaluated $((2^2)^2)^2=16$ times. This can be
-shown using the substitution model -- the full parenthetical nightmare
-can be found on
-[Github](https://github.com/mngu2382/sicp/blob/master/fragments/Ex1-41.scm).
+We find that `inc` has been evaluated 16 times. This can be shown using
+the substitution model -- the full parenthetical nightmare can be found
+on [Github](https://github.com/mngu2382/sicp/blob/master/fragments/Ex1-41.scm).
  
 <a name="Ex1.42"> </a>
 #### Exercise 1.42
