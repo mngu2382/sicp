@@ -199,9 +199,9 @@ We will also use `compose`, `double` and `repeated` defined in
                               1.0))
 {% endhighlight %}
 It appears that the number of repeated applications of `average-damp`
-to calculate the $n$-th root of a number using the fixed-point method
-is the largest integer less than $\log_2 n$. We therefore define the
-`nth-root` procedure as
+needed to calculate the $n$-th root of a number using the fixed-point
+method is the largest integer less than $\log_2 n$. We therefore
+define the `nth-root` procedure as
 
 {% highlight scheme %}
 (define (nth-root x n)
