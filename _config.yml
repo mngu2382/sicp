@@ -5,5 +5,5 @@ permalink: none
 
 # Custom variables
 title_prefix: SICP
-cat_list: { chapter1: "Chapter 1",
-            chapter2: "Chapter 2" }
+cat_list: { chapter1: "Chapter 1: Building Abstractions with Procedures",
+            chapter2: "Chapter 2: Building Abstractions with Data" }
