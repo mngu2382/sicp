@@ -352,5 +352,5 @@ different answers. Can you divise an interval-arithmetic package that
 does no have this shortcoming, or is this task impossible? (Warning:
 this problem is very difficult.)
 
-####
+#### Solution
 TODO
