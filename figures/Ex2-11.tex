@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}%
+  [level 1/.style={sibling distance=33mm},
+   level 2/.style={sibling distance=20mm},
+   level 3/.style={sibling distance=10mm},
+   level 4/.style={sibling distance=7mm},
+   every node/.style={rectangle, draw=black,
+     fill=gray!10, rounded corners=1mm,
+     font=\ttfamily\footnotesize,
+   }]
+\node{[* *] [* *]}[grow'=right, level distance=27mm]
+  child {node {[+ +] [* *]}
+    child[sibling distance=10mm] {node {[+ +] [+ +]}}
+    child[sibling distance=10mm] {node {[+ +] [- *]}
+      child[sibling distance=7mm] {node {[+ +] [- +]}}
+      child[sibling distance=7mm] {node {[+ +] [- -]}}}}
+  child {node {[- *] [* *]}
+    child {node {[- +] [* *]}
+      child {node {[- +] [+ +]}}
+      child {node {[- +] [- *]}
+        child {node {[- +] [- +]}}
+        child {node {[- +] [- -]}}}}
+    child {node {[- -] [* *]}
+      child {node {[- -] [+ +]}}
+      child {node {[- -] [- *]}
+        child {node {[- -] [- +]}}
+        child {node {[- -] [- -]}}}}};
+\end{tikzpicture}
+\end{preview}
+\end{document}
