@@ -138,7 +138,8 @@ cases. This can be represented as the following tree and procedure
 
 ![Possible combination of intervals]({{ site.baseurl }}/images/Ex2-11.png "Possible combinations of intervals")
 
-_Tikz code for figure on [GitHub](https://github.com/mngu2382/sicp/blob/master/figures/Ex2-11.tex).__
+_Tikz code for figure on [GitHub](https://github.com/mngu2382/sicp/blob/master/figures/Ex2-11.tex)._
+
 {% highlight scheme %}
 (define (mul-interval1 x y)
     (if (> (lower-bound x) 0)
