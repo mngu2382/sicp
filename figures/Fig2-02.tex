@@ -1,0 +1,39 @@
+% code based on the following answer on 
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.multipart}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[%
+  cons/.style={rectangle split,
+    rectangle split parts=2,
+    rectangle split horizontal,
+    rounded corners=1mm,fill=black!10,
+    inner sep=2ex,thick,draw,
+    append after command={\pgfextra{\let\mainnode=\tikzlastnode
+      \coordinate (c1 \mainnode) at ($(\mainnode.west)!.5!(\mainnode.one split)$);
+      \coordinate (c2 \mainnode) at ($(\mainnode.one split)!.5!(\mainnode.east)$);
+      \draw[fill=black] (c1 \mainnode)circle(2pt);
+      \draw[fill=black] (c2 \mainnode)circle(2pt);
+      \draw[fill=black] (c1 \mainnode)circle(2pt);}}},
+  single/.style={rectangle, rounded corners=1mm,draw=black,
+    font=\ttfamily, inner sep=1.5ex,thick},
+  >=stealth]
+
+\node[cons] (cons) {};
+\draw[->,thick] (c1 cons) -- +(0,-1) node[anchor=north,single] (1) {1};
+\draw[->,thick] (c2 cons) -- +(1,0) node[anchor=west,single] (2) {2};
+\draw[<-,thick] (cons.west) -- +(-1,0);
+\end{tikzpicture}
+\end{preview}
+\end{document}
