@@ -191,7 +191,7 @@ p {
 
 ol, ul {
     list-style-position: outside;
-    margin-left: 20px;
+    margin: -.8em 0 .8em 20px;
 }
 ol {
     list-style-type: decimal;
