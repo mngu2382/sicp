@@ -81,6 +81,9 @@ definition:
 {% endhighlight %}
 
 #### Exercise 1.31
+
+<br>
+
 1. The `sum` procedure is only the simplest of a vast number of similar
    abstractions that can be captured as higher-order procedures. Write
    an analogous procedure called `product` that returns the
@@ -97,6 +100,9 @@ definition:
    process, write one that generates a recursive process.
 
 ##### Solution
+
+<br>
+
 1. Defining `product` and `factorial` and calculating an approximation
    of $\pi$:
         {% highlight scheme %}
@@ -131,6 +137,9 @@ definition:
 {% endhighlight %}
 
 #### Exercise 1.32
+
+<br>
+
 1. Show that `sum` and `product` are both special cases of a still more
    general notion called `accumulate` that combines a collection of
    terms, using some general accumulation function:
@@ -150,6 +159,9 @@ definition:
    iterative process, write one that generates a recursive process.
 
 ##### Solution
+
+<br>
+
 1. Defining `accumulate`
         {% highlight scheme %}
 (define (accumulate combiner null-value term a next b)
@@ -198,6 +210,8 @@ Defining the `filtered-accumulate`, which takes the same arguments as
                       null-value)
                   (filtered-accumulate combiner null-value term (next a) next b pred))))
 {% endhighlight %}
+
+<br>
 
 1. the sum of squares of primes
         {% highlight scheme %}

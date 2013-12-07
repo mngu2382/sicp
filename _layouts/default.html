@@ -31,7 +31,7 @@
     <aside id="aside-content">
     {% if site.cat_list %}
       {% for cat in site.cat_list %}
-        <h4>{{ cat[1] }}</h4>
+        <h4 style="margin-bottom:15px">{{ cat[1] }}</h4>
         <ul>
           {% for post in site.posts reversed %}
             {% if post.categories[0] == cat[0] %}
