@@ -58,7 +58,7 @@ represent the set of all subsets of the set as a list of lists. For
 example, if the set is `(1 2 3)`, then the set of all subsets is
 
 {% highlight scheme %}
-`(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))`
+(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))
 {% endhighlight %}
 
 Complete the following definition of a procedure that generates the
@@ -77,8 +77,29 @@ set of subsets of a set and give a clear explanation of why it works:
 {% highlight scheme %}
 (define (subset s)
     (if (null? s)
-        (list nil)
+        (list '())
         (let ((rest (subset (cdr s))))
              (append rest (map (lambda (ls) (cons (car s) ls))
                                rest)))))
+{% endhighlight %}
+
+Start with a collection containing only the empty set (`'()`) we
+extend the collection by firstly including all set perviously in the
+collection and then adding the sets created by adding an additional
+unique element to each of the sets already in the collection. To
+illustrate:
+
+{% highlight scheme %}
+; starting with the empty set
+(())
+
+; collection extended by including the new set (3),
+; created by adding 3 to the empty
+(() (3))
+
+; extend the old collection by including the sets created
+; by adding the new element, 2, to existing sets
+(() (3) (2) (3 2))
+
+...
 {% endhighlight %}
