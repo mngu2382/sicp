@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[LSBC3,T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\usepackage{chessboard}
+\usepackage{xcolor}
+
+\setboardfontencoding{LSBC3}%
+\setchessboard{showmover=false,label=false,largeboard}
+\setboardfontcolors{blackfieldmask=gray,blackfield=gray}
+
+\begin{document}
+\begin{preview}
+\chessboard[setpieces={qa6,qb2,qc7,qd1,qe4,qf8,qg5,qh3}]
+\end{preview}
+\end{document}
