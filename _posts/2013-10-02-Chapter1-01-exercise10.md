@@ -123,7 +123,7 @@ $\log(1) = 0$.)
 4.555537551999825
 {% endhighlight %}
 
-<a name="Ex1.27"> </a>
+<a name="Ex1.37"> </a>
 #### Exercise 1.37
 1. An infinite _continued fraction_ is an expression of the form
 
