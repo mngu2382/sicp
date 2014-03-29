@@ -1,0 +1,37 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{preview}
+\resizebox{12cm}{!}{
+\begin{tikzpicture}[>=stealth,font=\sffamily\tiny]
+\node[rectangle,minimum width=3cm,minimum height=1.5cm,rotate=20]
+    (rec) at (0,0) {};
+
+\coordinate (v1) at ($ (2.2, -0.4) + 0.05*(rand, rand) $);
+
+\coordinate [label={[align=left]below:(0, 0) point on\\ display screen}]%
+  (o) at ($ (rec.south west) + (v1) $);
+
+\draw[<-] (rec.south west) -- (o);
+\draw[->] (rec.south west) -- (rec.south east);
+\draw[->] (rec.south west) -- (rec.north west);
+\draw[dashed] (rec.south east) -- (rec.north east);
+\draw[dashed] (rec.north west) -- (rec.north east);
+\draw[fill] (o) circle (1pt);
+
+\draw (rec.north west) node[below left,align=left] {frame\\edge2\\vector};
+\draw (rec.south east) node[below,align=left] {frame\\edge1\\vector};
+\draw (rec.south west) node[below right,align=left] {frame\\origin\\vector};
+\end{tikzpicture}
+}
+\end{preview}
+\end{document}

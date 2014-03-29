@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[>=stealth,font=\sffamily\small]
+\node[rectangle,minimum width=2cm,minimum height=3cm]
+    (rec1) at (0,0) {};
+\node[rectangle, minimum height=1cm, below=14pt]
+    at (rec1.south) {Untransformed frame};
+
+\draw[->] (rec1.south west) -- (rec1.south east);
+\draw[->] (rec1.south west) -- (rec1.north west);
+
+\draw[fill] (rec1.south west) circle (1pt);
+
+\draw (rec1.north west) node[above] {$\mathbf e_2=b\mathbf j$};
+\draw (rec1.south east) node[below] {$\mathbf e_1=a\mathbf i$};
+\draw (rec1.south west) node[below left] {$o$};
+
+\node[rectangle,minimum width=2cm,minimum height=3cm]
+    (rec2) at (6,0) {};
+\node[rectangle, minimum height=1cm, below=14pt]
+    at (rec2.south) {Horizontally flipped};
+
+\draw[<-] (rec2.south west) -- (rec2.south east);
+\draw[->] (rec2.south east) -- (rec2.north east);
+
+\draw[fill] (rec2.south east) circle (1pt);
+
+\draw (rec2.north east) node[above] {$\mathbf e_2'=b\mathbf j$};
+\draw (rec2.south west) node[below] {$\mathbf e_1'=-a\mathbf i$};
+\draw (rec2.south east) node[below right] {$o$};
+\end{tikzpicture}
+\end{preview}
+\end{document}
