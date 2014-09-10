@@ -5,7 +5,7 @@ categories: chapter1
 mathjax: true
 ---
 
-#### Exercise 1.11
+## Exercise 1.11
 A function $f$ is defined by the rule that
 
 $$
@@ -18,7 +18,7 @@ $$
 Write a procedure that computes $f$ by means of a recursive process.
 Write a procedure that computee $f$ by means of an iterative process.
 
-##### Solution
+### Solution
 The recursive process:
 
 {% highlight scheme %}
@@ -43,7 +43,7 @@ The itertive process:
         (fn-iter 0 1 2 3)))
 {% endhighlight %}
 
-#### Exercise 1.12
+## Exercise 1.12
 The following pattern of numbers is called _Pascal's triangle_.
 
             1
@@ -51,10 +51,11 @@ The following pattern of numbers is called _Pascal's triangle_.
         1   2   1
       1   3   3   1
     1   4   6   4   1
+
 Write a procedure that computes elements of Pascal's triangle by
 means of a recursive process.
 
-##### Solution
+### Solution
 Using the properties of binomial coefficients, which can be expressed
 as
 
@@ -70,7 +71,7 @@ $$
                    (choose (- n 1) (- m 1))))))
 {% endhighlight %}
 
-#### Exercise 1.3
+## Exercise 1.3
 Prove that $\text{Fib}(n)$ is the closest integer to
 $\varphi^n/\sqrt{5}$, where $\varphi = (1 + \sqrt{5})/2$.
 
@@ -78,7 +79,7 @@ Hint: Let $\psi = (1-\sqrt{5})/2$. Use induction and the definition of
 the Fibonacci numbers to prove that
 $\text{Fib}(n)= (\varphi^n-\psi^n)/\sqrt{5}$.
 
-##### Solution
+### Solution
 To prove
 
 $$

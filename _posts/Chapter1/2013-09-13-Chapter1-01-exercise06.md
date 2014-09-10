@@ -15,7 +15,7 @@ process generated in evaluating `(gcd 206 40)` and indicate the
 operations are actually performed in the normal-order evaluation of
 `(gcd 206 40)`? In the applicative-order evaluation?
 
-##### Solution
+### Solution
 The `gcd` is defined as
 {% highlight scheme %}
 (define (gcd a b)
@@ -27,7 +27,7 @@ The `gcd` is defined as
 With normal-order evaluation `reminder` is performed 18 times
 (highlighted below):
 
-<pre><code>(gcd 206 40)
+<div class="highlight"><pre><code>(gcd 206 40)
  
 (gcd 40 (remainder 206 40))
 
@@ -81,12 +81,12 @@ With normal-order evaluation `reminder` is performed 18 times
            (<span class='ni'>remainder</span> 40 (<span class='ni'>remainder</span> 206 40)))
 
 2
-</code></pre>
+</code></pre></div>
 
 With applicative-order evaluation `reminder` is performed 4 times
 (highlighted below):
 
-<pre><code>
+<div class="highlight"><pre><code>
 (gcd 206 40)
 
 (if (= 40 0) 206 (gcd 40 (remainder 206 40)))
@@ -116,4 +116,4 @@ With applicative-order evaluation `reminder` is performed 4 times
 (if (= 0 0) 2 (gcd 2 (remainder 2 0)))
 
 2
-</code></pre>
+</code></pre></div>

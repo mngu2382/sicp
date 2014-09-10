@@ -5,12 +5,14 @@ categories: chapter1
 mathjax: true
 ---
 
-#### Exercise 1.35
+## Exercise 1.35
+
 Show that the golden ratio $\varphi$ (Section 1.2.2) is a fixed point
 of the transformation $x\mapsto 1+1/x$, and use this fact to compute
 $\varphi$ by means of the `fixed-point` procedure.
 
-##### Solution
+### Solution
+
 The golden ratio is the value that satisfies the equation
 
 $$
@@ -41,7 +43,8 @@ So $\varphi$ can be estimated with the following procedure
 ; 1.6180327868852458
 {% endhighlight %}
 
-#### Exercise 1.36
+## Exercise 1.36
+
 Modify `fixed-point` so that it prints the sequence of approximations
 it generates, using the `newline` and `display` primitives shown in
 [Exercise 1.22]({{ site.baseurl }}/chapter1/Chapter1-01-exercise07.html#Ex1.22).
@@ -52,7 +55,8 @@ takes with and without average damping. (Note that you cannot start
 `fixed-point` with a guess of 1 as this would cause division by
 $\log(1) = 0$.)
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define tolerance 0.00001)
 
@@ -124,7 +128,9 @@ $\log(1) = 0$.)
 {% endhighlight %}
 
 <a name="Ex1.37"> </a>
-#### Exercise 1.37
+
+## Exercise 1.37
+
 1. An infinite _continued fraction_ is an expression of the form
 
    $$
@@ -162,35 +168,36 @@ $\log(1) = 0$.)
    one that generates an iterative one. If it generates an iterative
    process, write one that generates a recursive process.
 
-##### Solution
+### Solution
+
 1. A recursive procedure for continued fractions
-        {% highlight scheme %}
-(define (cont-frac n d k)
-       (define (cont-frac-rec i)
-           (if (= i > k)
-               0
-               (/ (n i) (+ (d i) (cont-frac-rec (+ i 1))))))
-       (cont-frac-rec 1))
+
+       (define (cont-frac n d k)
+           (define (cont-frac-rec i)
+               (if (= i > k)
+                   0
+                   (/ (n i) (+ (d i) (cont-frac-rec (+ i 1))))))
+           (cont-frac-rec 1))
        
-(/ 1 (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12))
-; 1.6180555555555558
-     
-(/ 1 (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 13))
-; 1.6180257510729614
-{% endhighlight %}
+       (/ 1 (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12))
+       ; 1.6180555555555558
+            
+       (/ 1 (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 13))
+       ; 1.6180257510729614
 
 2. An iterative procedure for continued fractions
-        {% highlight scheme %}
-(define (cont-frac n d k)
-       (define (cont-frac-iter i acc)
-           (if (= i 0)
-               acc 
-               (cont-frac-iter (- i 1)
-                               (/ (n i) (+ (d i) acc)))))
-       (cont-frac-iter k 0))
-{% endhighlight %}
 
-#### Exercise 1.38
+      (define (cont-frac n d k)
+          (define (cont-frac-iter i acc)
+              (if (= i 0)
+                  acc 
+                  (cont-frac-iter (- i 1)
+                                  (/ (n i) (+ (d i) acc)))))
+          (cont-frac-iter k 0))
+
+
+## Exercise 1.38
+
 In 1737, the Swiss mathematician Leonhard Euler published a memoir
 _De Fractionibus Continuis_, which included a continued fraction
 expansion for $e - 2$, where $e$ is the base of the natural logarithms.
@@ -199,7 +206,8 @@ In this fraction, the $N_i$ are all 1, and the $D_i$ are successively
 your `cont-frac` procedure from [Exercise 1.37](#Ex1.37) to approximate
 $e$ based on Euler's expansion.
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (+ 2 (cont-frac (lambda (i) 1.0)
                 (lambda (i) (if (= 0 (remainder (+ i 1) 3))
@@ -209,7 +217,8 @@ $e$ based on Euler's expansion.
 ; 2.7182817182817183
 {% endhighlight %}
 
-#### Exercise 1.39
+## Exercise 1.39
+
 A continued fraction representation of the tangent function was
 published in 1770 by the German mathematician J.H. Lambert:
 
@@ -222,7 +231,8 @@ computes an prroximation to the tangent function based on Lambert's
 formula. As in [Exercise 1.37](#Ex1.37), `k` specifies the number of
 terms to compute.
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (tan-cf x k)
     (define x2 (* x x))

@@ -17,12 +17,19 @@
   </head>
   
   <body>
+
     <header id="banner">
-      <h1><a href="/">:testSite <strong>a work in progress</strong></a></h1>
-      <nav><ul>
-        <li><a href="{{ site.baseurl }}/index.html">{{ site.name }}</a></li>
-      </ul></nav>
+      <a href="http://mngu2382.github.io/index.html">
+        <h1>:testSite </h1>
+        <h2> work in progress</h1>
+      </a>
     </header>
+
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}">{{ site.name }}</a></li>
+      </ul>
+    </nav>
 
     <section>
       {{ content }}
@@ -31,7 +38,7 @@
     <aside id="aside-content">
     {% if site.cat_list %}
       {% for cat in site.cat_list %}
-        <h4 style="margin-bottom:15px">{{ cat[1] }}</h4>
+        <h2 style="margin-bottom:15px">{{ cat[1] }}</h2>
         <ul>
           {% for post in site.posts reversed %}
             {% if post.categories[0] == cat[0] %}

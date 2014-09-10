@@ -6,12 +6,14 @@ mathjax: true
 ---
 
 <a name="Ex1.21"> </a>
-#### Exercise 1.21
+
+## Exercise 1.21
 
 Use the `smallest-divisor` procedure to find the smallest divisor of
 each of the following numbers: 199, 1999, 19999.
 
-##### Solution
+### Solution
+
 The `smallest-divisor` is defined as
 {% highlight scheme %}
 (define (smallest-divisor n)
@@ -38,7 +40,9 @@ The `smallest-divisor` is defined as
 {% endhighlight %}
 
 <a name="Ex1.22"> </a>
-#### Exercise 1.22
+
+## Exercise 1.22
+
 Most Lisp implementations include a primitive called `runtime`
 that returns an integer that specifies the amount of time the system
 has been running (measured, for example, in mircoseconds). The
@@ -73,7 +77,8 @@ $\Theta(\sqrt{n})$ predictions? Is your result compatible with the
 notation that programs on your machine run in time proportional to the
 number of steps required for the computation?
 
-##### Solution
+### Solution
+
 The procedure `primes` was previously defined in the text as
 {% highlight scheme %}
 (define (prime? n)
@@ -218,7 +223,8 @@ Here "ratio" refers to the average time for `timed-prime-test` of the
 set compared with the previous set. We see the the ratios are close to
 $\sqrt{10}\approx 3.2$.
 
-#### Exercise 1.23
+## Exercise 1.23
+
 The `smallest-divisor` procedure shown at the start of this section
 does lots of needless testing: After it checks to see if the number is
 divisible by 2 there is no point in checking to see if it is divisible
@@ -236,7 +242,8 @@ Is this expectation confirmed? If not, what is the observed ratio of
 the speeds of the two algorithms, and how do you explain the fact that
 it is different from 2?
 
-##### Solution
+### Solution
+
 We define the `next` procedure
 {% highlight scheme %}
 (define (next n)
@@ -375,7 +382,9 @@ This brings the reduction (in the three larger sets) to about 48%.
 I'll stop here.
 
 <a name="Ex1.24"> </a>
-#### Exercise 1.24
+
+## Exercise 1.24
+
 Modify the `timed-prime-test` procedure of [Exercise 1.22](#Ex1.22)
 to use `fast-prime?` (the Fermat method), and test each of the 12
 primes you found in that exercise. Since the Fermat test has
@@ -384,7 +393,8 @@ near 1,000,000 to compare with the time needed to test primes near
 1000? Do your data bear this out? Can you explain any discrepancy you
 find?
 
-##### Solution
+### Solution
+
 The `fast-prime?` and associated procedures:
 {% highlight scheme %}
 (define (expmod base exp m)
@@ -521,7 +531,8 @@ $$
 This is roughly the case when we compare times for tests of primes near
 $10^{12}$ with primes near $10^6$.
 
-#### Exercise 1.25
+## Exercise 1.25
+
 Alyssa P. Hacker complaind that we went to a lot of extra work in
 writting `expmod`. After all, she says, since we already know
 how to compute exponentials, we could have simply written
@@ -532,13 +543,15 @@ how to compute exponentials, we could have simply written
 Is she correct? Would this procedure serve as well as for our fast
 prime tester? Explain.
 
-##### Solution
+### Solution
+
 For large `exp` the `expmod` defined in [Exercise 1.24](#Ex1.24) helps
 us avoid numerical overflow as the returned value of `expmod` is never
 greater that `m`. In Alyssa's `expmod`, `fast-expt` can grow very
 quickly and cause numerical overflow.
 
-#### Exercise 1.26
+## Exercise 1.26
+
 Louis Reasoner is having great difficulty doing
 [Exercise 1.24](#Ex1.24). His `fast-prime?` test seems to run more
 slowly than his `prime?` test. Louis calles his friend Eva Lu Ator over
@@ -559,7 +572,8 @@ rather than calling square:
 says Eva. "By writing the procedure like that, you have transformed
 the $\Theta(\log n)$ process into a $\Theta(n)$ process." Explain.
 
-##### Solution
+### Solution
+
 The difference between
 {% highlight scheme %}
 (* (expmod base (/ exp 2) m)
@@ -573,13 +587,15 @@ is caused by applicative-order evaluation which means that
 `(expmod base (/ exp 2) m)` is evaluated twice in the first fragment,
 while only once in the second.
 
-#### Exercise 1.27
+## Exercise 1.27
+
 Demonstrate that Carmichael numbers listed really do fool the Fermat
 test. That is, write a procedure that take s an integer $n$ and test
 whether $a^n$ is congruent to $a$ modulo $n$ for every $a\lt n$, and
 try your procedure on the Carmichael numbers.
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (congruent? n)
     (define (congruent-test n a)
@@ -599,6 +615,7 @@ Evaluating this procedure with a Carmichael number:
 {% endhighlight %}
 
 #### Exercise 1.28
+
 One variant of the Fermat test that cannot be fooled is called the
 _Miller-Rabin test_
 ([Miller 1976](http://www.cs.cmu.edu/~glmiller/Publications/sort_date.html#1976);
@@ -623,7 +640,8 @@ test with a procedure analogous to `fermat-test`. Check your procedure
 by testing various known prime and non-primes. Hint: One convenient way
 to make `expmod` signal is to have it return 0.
 
-##### Solution
+### Solution
+
 The following `expmod` will now return 0 in the case that a nontrivial
 square root of 1 mod $m$ is found.
 {% highlight scheme %}

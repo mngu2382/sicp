@@ -5,7 +5,7 @@ categories: chapter1
 mathjax: True
 ---
 
-#### Exercise 1.16
+## Exercise 1.16
 Design a procedure that evolves an iterative exponentiation process
 that uses successive squaring and uses a logarithmic number of steps,
 as does `fast-expt`. (Hint: Using the observation that
@@ -18,7 +18,7 @@ end of the process. In general, the technique of defining an _invariant
 quantity_ that remains unchanged from state to state is a powerful
 way to think about the design of iterative algorithms.)
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (fast-expt b n)
@@ -29,7 +29,7 @@ way to think about the design of iterative algorithms.)
     (expt-iter 1 b n))
 {% endhighlight %}
 
-#### Exercise 1.17
+## Exercise 1.17
 The exponentiation algorithms in this section are base on performing
 exponentiation by means of repeated multiplication. In a similar way,
 one can perform integer multiplication by means of repeated addition.
@@ -50,7 +50,7 @@ doubles an integer, and `halve`, which divides an (even) integer by 2.
 Using these, design a multiplication procedure analogous to
 `fast-expt` that uses a logarithmic number of steps.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (fast-multiply a b)
@@ -61,13 +61,13 @@ Using these, design a multiplication procedure analogous to
               (else (+ a (fast-multiply a (- b 1)))))))
 {% endhighlight %}
 
-#### Exercise 1.18
+## Exercise 1.18
 Using the results of Exercise 1.16 and Exercise 1.17, devise a
 procedure that generates an iterative process for multiplying two
 integers in terms of adding, doubling, and halving and uses a
 logarithmic number of steps.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (fast-multiply a b)
@@ -80,7 +80,7 @@ logarithmic number of steps.
         (multiply-iter a b 0)))
 {% endhighlight %}
 
-#### Exercise 1.19
+## Exercise 1.19
 
 There is a clever algorithm for computing the Fibonacci numbers in a
 logarithmic number of steps. Recall the transformation of the state
@@ -147,7 +147,7 @@ which runs a logarithmic number of steps:
                         (- count 1)))))
 {% endhighlight %}
 
-##### Solution
+### Solution
 Applying $T_{pq}$ to $a_0,b_0$
 
 $$

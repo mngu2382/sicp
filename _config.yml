@@ -1,7 +1,7 @@
 name: A SICP Walkthrough
-pygments: true
-baseurl: "/sicp"
+highlighter: pygments
 permalink: none
+baseurl: "/sicp"
 
 # Custom variables
 title_prefix: SICP

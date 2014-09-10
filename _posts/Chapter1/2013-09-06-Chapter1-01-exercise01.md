@@ -5,7 +5,7 @@ categories: chapter1
 mathjax: true
 ---
 
-#### Exercise 1.6
+## Exercise 1.6
 Alyssa P. Hacker doesn't see why `if` needs to be provided as a
 special form. "Why can't I just define it a an ordinary procedure in
 terms of cond?" she asks. Alyssa's friend Eva Lu Ator claims this can
@@ -39,7 +39,7 @@ Delighted, Alyssa uses `new-if` to rewrite the square-root program:
 What happens when Alyssa attempts to use this to compute square roots?
 Explain.
 
-##### Solution
+### Solution
 As `new-if` is evaluated in an applicative interpreter, all its
 operands are evaluated first.
 
@@ -51,7 +51,7 @@ So that
 will be executed regardless of whether the guess is "good enough".
 This leads to the indefinite recursion of the `sqrt-iter` procedure.
 
-#### Exercise 1.7
+## Exercise 1.7
 The `good-enough?` test used in computing square roots will not be
 very effective for finding the square root of very small numbers.
 Also, in real computers, arithmetic operations are almost always
@@ -64,7 +64,7 @@ a very small fraction of the guess. Design a square-root procedure
 that uses this kind of end test. Does this work better for small and
 large numbers?
 
-##### Solution
+### Solution
 Based upon Newton's method the following procedures are used to find
 the square root of `x`:
 
@@ -125,7 +125,7 @@ the previous failing examples now produce more sensible outputs:
 ; 11111162851502884.
 {% endhighlight %}
 
-#### Exercise 1.8
+## Exercise 1.8
 Newton's method for cubed roots is based on the fact that if $y$ is
 an approximation to the cube root of $x$, then a better
 approximation is given by the value
@@ -137,7 +137,7 @@ $$
 Use this formula to implement a cube-root procedure analogous to the
 square-root procedure.
 
-##### Solution
+### Solution
 We use `good-enough?` from Exercise 1.7 and redefine `improve` to
 write our `cuberoot` procedure:
 

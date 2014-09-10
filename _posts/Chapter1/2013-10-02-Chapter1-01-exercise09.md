@@ -20,7 +20,7 @@ Then we have
 What happens if we (perversely) ask the interpreter to evaluate the
 combination `(f f)`? Explain.
 
-##### Solution
+### Solution
 The process of evaluating `(f f)` unfolds as follows:
 {% highlight scheme %}
 (f f)
