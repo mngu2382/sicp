@@ -19,7 +19,11 @@ h1, h2, h3, h4, h5, h6 {
     h3 { font-size: 1.2em; }
     h4 { font-size: 1.05em; }
 
-nav, footer {
+nav {
+  margin-bottom: 10px;
+}
+
+footer {
   margin-bottom: 30px;
 }
 
