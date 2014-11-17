@@ -16,7 +16,7 @@ property that evaluating
 produces the procedures `right-split` and `up-split` with the same
 behaviour as the one already defined.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (split proc1 proc2)

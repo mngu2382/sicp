@@ -5,13 +5,15 @@ categories: chapter2
 ---
 
 <a name="Ex2.50"> </a>
-#### Exercise 2.50
+
+## Exercise 2.50
 
 Define the transformation `flip-horiz`, which flips painters
 horizontally, and transformations that rotate painters
 counterclockwise by 180 and 270 degrees.
 
-##### Solution
+### Solution
+
 Analogus to `flip-vert` define in the text we define `flip-horiz`:
 
 {% highlight scheme%}
@@ -40,7 +42,8 @@ And 180 and 270 counterclockwise rotations (we repeatedly apply
 {% endhighlight %}
 
 <a name="Ex2.51"> </a>
-#### Exercise 2.51
+
+## Exercise 2.51
 
 Define the `below` operation for painters. `below` takes two painters
 as arguments. The resulting painter, given a frame, draws with the
@@ -50,7 +53,7 @@ a procedure that is analogous to the `beside` procedure given above,
 and again in terms of `beside` and suitable rotation operations (from
 [Exercise 2.50](#Ex2.51)).
 
-##### Solution
+### Solution
 
 Analogous to `beside`:
 

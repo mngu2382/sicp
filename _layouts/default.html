@@ -11,57 +11,31 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico"/>
     
-    {% if page.mathjax %}
-      {% include mathjax.html %}
-    {% endif %}
-  </head>
-  
+    {% if page.mathjax %}{% include mathjax.html %}{% endif %}
+  </head>  
   <body>
-
     <header id="banner">
       <a href="http://mngu2382.github.io/index.html">
         <h1>:testSite </h1>
-        <h2> work in progress</h1>
+        <h2> work in progress</h2>
       </a>
     </header>
-
     <nav>
       <ul>
         <li><a href="{{ site.baseurl }}">{{ site.name }}</a></li>
       </ul>
     </nav>
-
-    <section>
-      {{ content }}
+    <section>{{ content }}
     </section>
-
-    <aside id="aside-content">
-    {% if site.cat_list %}
-      {% for cat in site.cat_list %}
+    <aside id="aside-content">{% if site.cat_list %}{% for cat in site.cat_list %}
         <h2 style="margin-bottom:15px">{{ cat[1] }}</h2>
-        <ul>
-          {% for post in site.posts reversed %}
-            {% if post.categories[0] == cat[0] %}
-              {% if page.title == post.title %}
-                <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
-              {% else %}
-                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    {% else %}
-      {% for post in site.posts reversed %}
-        {% if page.title == post.title %}
-          <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
-        {% else %}
-          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+        <ul> {% for post in site.posts reversed %}{% if post.categories[0] == cat[0] %}{% if page.title == post.title %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>{% else %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>{% endif %}{% endif %}{% endfor %}
+        </ul> {% endfor %}{% else %}{% for post in site.posts reversed %}{% if page.title == post.title %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>{% else %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>{% endif %}{% endfor %}{% endif %}
     </aside>
-
     <footer>
         <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0;display:inline" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a> This work is licensed under a
         <br />

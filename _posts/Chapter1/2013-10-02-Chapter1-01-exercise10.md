@@ -173,11 +173,11 @@ $\log(1) = 0$.)
 1. A recursive procedure for continued fractions
 
        (define (cont-frac n d k)
-           (define (cont-frac-rec i)
-               (if (= i > k)
-                   0
-                   (/ (n i) (+ (d i) (cont-frac-rec (+ i 1))))))
-           (cont-frac-rec 1))
+          (define (cont-frac-rec i)
+             (if (= i > k)
+                 0
+                 (/ (n i) (+ (d i) (cont-frac-rec (+ i 1))))))
+          (cont-frac-rec 1))
        
        (/ 1 (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12))
        ; 1.6180555555555558
@@ -187,12 +187,12 @@ $\log(1) = 0$.)
 
 2. An iterative procedure for continued fractions
 
-      (define (cont-frac n d k)
+       (define (cont-frac n d k)
           (define (cont-frac-iter i acc)
-              (if (= i 0)
-                  acc 
-                  (cont-frac-iter (- i 1)
-                                  (/ (n i) (+ (d i) acc)))))
+             (if (= i 0)
+                 acc 
+                 (cont-frac-iter (- i 1)
+                                 (/ (n i) (+ (d i) acc)))))
           (cont-frac-iter k 0))
 
 

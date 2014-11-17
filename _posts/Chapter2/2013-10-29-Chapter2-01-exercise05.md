@@ -5,7 +5,9 @@ categories: chapter2
 ---
 
 <a name="Ex2.17"> </a>
-#### Exercise 2.17
+
+## Exercise 2.17
+
 Define a procedure `last-pair` that returns the list that contains
 only the last element of a given (non-empty) list:
 
@@ -14,7 +16,7 @@ only the last element of a given (non-empty) list:
 ; (34)
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (list-pair items)
@@ -24,7 +26,9 @@ only the last element of a given (non-empty) list:
 {% endhighlight %}
 
 <a name="Ex2.18"> </a>
-#### Exercise 2.18
+
+## Exercise 2.18
+
 Define a procedure `reverse` that takes a list as argument and returns
 a list of the same elements in reverse order:
 
@@ -33,7 +37,7 @@ a list of the same elements in reverse order:
 ; (25 16 9 4 1)
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (reverse items)
@@ -47,7 +51,9 @@ a list of the same elements in reverse order:
 TODO: is there a recursive process solution?
 
 <a name="Ex2.19"> </a>
-#### Exercise 2.19
+
+## Exercise 2.19
+
 Consider the counting-change program of Section 1.2.2. It would be
 nice to be able to easily change the currency used by the program, so
 that we could compute the number of ways to change a British pound,
@@ -95,7 +101,7 @@ and `no-more?` in terms of primitive operations on list structures.
 Dose the order of the list `coin-values` affect the answer produced by
 `cc`? Why or why not?
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (first-denomination coins)
@@ -110,8 +116,10 @@ Dose the order of the list `coin-values` affect the answer produced by
 
 The order of the coins used in `cc` does not affect the results.
 
-<a name="Ex2.19"> </a>
-#### Exercise 2.19
+<a name="Ex2.20"> </a>
+
+## Exercise 2.20
+
 The procedures `+`, `*`, and `list` takes arbitrary numbers of
 arguments. One way to define such proceures is to use `define` with
 __dotted-tail notation__. In a procedure definition, a parameter list
@@ -122,7 +130,7 @@ value will be a list of any remaining arguments. For instance, given
 the definition
 
 {% highlight scheme %}
-(define (f x y . z) ,boday>)
+(define (f x y . z) <body>)
 {% endhighlight %}
 
 the procedure `f` can be called with two or more arguments. If we
@@ -136,10 +144,10 @@ then in the body of `f`, `x` will be 1, `y` will be 2, and `z` will be
 the list `(3 4 5 6)`. Given the definition
 
 {% highlight scheme %}
-(define (g . w) ,boday>)
+(define (g . w) <body>)
 {% endhighlight %}
 
-the procedure `g` can be caleed with zero or more arguments. If we
+the procedure `g` can be called with zero or more arguments. If we
 evaluate
 
 {% highlight scheme %}
@@ -168,7 +176,7 @@ same even-odd parity as the first argument. For example,
 ; (2 4 6)
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (same-parity x . y)

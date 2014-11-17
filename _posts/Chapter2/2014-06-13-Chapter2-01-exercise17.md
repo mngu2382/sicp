@@ -5,7 +5,8 @@ categories: chapter2
 ---
 
 <a name="Ex2.53"> </a>
-#### Exercise 2.53
+
+## Exercise 2.53
 
 What woud the interpreter print in response to evaluating each of the
 following expressions?
@@ -20,7 +21,7 @@ following expressions?
 (memq 'red '(red shoes blue socks))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (list 'a 'b 'c)
@@ -46,7 +47,8 @@ following expressions?
 {% endhighlight %}
 
 <a name="Ex2.54"> </a>
-#### Exercise 2.54
+
+## Exercise 2.54
 Two lists are said to be `equal?` if they contain equal elements
 arranged in the same order. For example,
 
@@ -67,7 +69,7 @@ they are both list such that `(car a)` is `equal?` to `(car b)` and
 `(cdr a)` is `equal?` `(cdr b)`. Using this idea, implement `equal?`
 as a procedure.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (equal? x y)
@@ -78,7 +80,8 @@ as a procedure.
 {% endhighlight %}
 
 <a name="Ex2.55"> </a>
-#### Exercise 2.55
+
+## Exercise 2.55
 
 Eva Lu Ator types to the interpreter the expression
 
@@ -88,7 +91,7 @@ Eva Lu Ator types to the interpreter the expression
 
 To her supprise, the interpreter prints back `quote`. Explain.
 
-##### Solution
+### Solution
 
 If we translate the expression `''abracadabra` to use the `quote`
 special form instead of `'`, we get
@@ -99,4 +102,4 @@ special form instead of `'`, we get
 
 The second inner `quote` is not evaluated but treated as a symbol, so
 that the expression is getting the `car` of the list
-`(quote abracadabra)` which is quote.
+`(quote abracadabra)` which is `quote`.

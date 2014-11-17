@@ -6,7 +6,9 @@ mathjax: true
 ---
 
 <a name="Ex2.4"> </a>
-#### Exercise 2.4
+
+## Exercise 2.4
+
 Here is an alternative procedural representation of pairs. For this
 representation, verify that `(car (cons x y))` yields `x` for any
 objects `x` and `y`.
@@ -22,7 +24,8 @@ objects `x` and `y`.
 What is the corresponding definition of `cdr`? (Hint: To verify that
 this works, make use of the substitution model of Section 1.1.5)
 
-##### Solution
+### Solution
+
 Using the substitution method:
 
 {% highlight scheme %}
@@ -41,13 +44,16 @@ And the corresponding definition of `cdr`:
 {% endhighlight %}
 
 <a name="Ex2.5"> </a>
-#### Exercise 2.5
+
+## Exercise 2.5
+
 Show that we can represent pairs of nonnegative integers using only
 numbers and arithmetic operations if we represent the pair $a$ and $b$
 as the integer that is the product $2^a3^b$. Give the corresponding
 definitions of the procedures `cons`, `car`, and `cdr`.
 
-##### Solution
+### Solution
+
 Since $2^a3^b$ is a composite of only two prime numbers, 2 and 3,
 given an integer $x=2^a3^b$, $a$ and $b$ are, respectively, the
 number of times that 2 and 3 divide $x$. Hence we can define
@@ -70,7 +76,9 @@ number of times that 2 and 3 divide $x$. Hence we can define
 {% endhighlight %}
 
 <a name="Ex2.6"> </a>
-#### Exercise 2.6
+
+## Exercise 2.6
+
 In case representing pairs as procedures wasn't mind-boggling enough,
 consider that, in a language that can manipulate procedures, we can
 get by without numbers (at least insofar as nonnegative integers are
@@ -91,7 +99,8 @@ Define `one` and `two` directly (not in terms of `zero` and `add-1`).
 definition of the addition procedure `+` (not in terms of repeated
 applications of `add-1`).
 
-##### Solution
+### Solution
+
 Using the substitution model to evaluate `(add-1 zero)`:
 
 {% highlight scheme %}

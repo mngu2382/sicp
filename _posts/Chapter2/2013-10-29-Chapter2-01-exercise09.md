@@ -6,7 +6,9 @@ mathjax: true
 ---
 
 <a name="Ex2.33"> </a>
-#### Exercise 2.33
+
+## Exercise 2.33
+
 Fill in the missing expressions to complete the following definitions
 of some basic list-manipulation operations as accumulations:
 
@@ -21,7 +23,8 @@ of some basic list-manipulation operations as accumulations:
   (accumulate <??> 0 sequence))
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 The `accumulate` procedure as defined in the text
 
 {% highlight scheme %}
@@ -46,7 +49,9 @@ The `accumulate` procedure as defined in the text
 {% endhighlight %}
 
 <a name="Ex2.34"> </a>
-#### Exercise 2.34
+
+## Exercise 2.34
+
 Evaluating a polynomial in $x$ at a given value of x can be formulated
 as an accumulation. We evaluate the polynomial
 
@@ -81,7 +86,8 @@ For example, to compute $1+3x+5x^3+x^5$ at $x=2$ you would evaluate
 (horner-eval 2 (list 1 3 0 5 0 1))
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (horner-eval x coefficient-sequence)
     (accumulate (lambda (this-coeff higher-terms)
@@ -95,7 +101,9 @@ For example, to compute $1+3x+5x^3+x^5$ at $x=2$ you would evaluate
 {% endhighlight %}
 
 <a name="Ex2.35"> </a>
-#### Exercise 2.35
+
+## Exercise 2.35
+
 Redefine `count-leaves` as an accumulation:
 
 {% highlight scheme %}
@@ -103,7 +111,8 @@ Redefine `count-leaves` as an accumulation:
     (accumulate <??> <??> (map <??> <??>)))
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 Using a procedure analogous to `enumerate-tree` from the text
 
 {% highlight scheme %}
@@ -120,7 +129,8 @@ Using a procedure analogous to `enumerate-tree` from the text
 {% endhighlight %}
 
 <a name="Ex2.36"> </a>
-#### Exercise 2.36
+
+## Exercise 2.36
 
 The procedure `accumulate-n` is similar to `accumulate` except that it
 takes as its third arguments a sequence of sequences, which are all
@@ -141,7 +151,7 @@ definition of `accumulate-n`:
               (accumulate-n op init <??>))))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (accumulate-n op init seqs)
@@ -152,7 +162,8 @@ definition of `accumulate-n`:
 {% endhighlight %}
 
 <a name="Ex2.37"> </a>
-#### Exercise 2.37
+
+## Exercise 2.37
 
 Suppose we represent vector $\boldsymbol v=(v_i)$ as sequences of
 numbers, and matricies $\boldsymbol m=(m_{ij})$ as sequences of
@@ -201,7 +212,7 @@ computing the other matrix operations.
       (map <??> m)))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (matrix-*-vector m v)
@@ -216,7 +227,8 @@ computing the other matrix operations.
 {% endhighlight %}
 
 <a name="Ex2.38"> </a>
-#### Exercise 2.38
+
+## Exercise 2.38
 
 The `accumulate` procedure is also known as `fold-right`, because it
 combines the first element of the sequence with the result of
@@ -249,7 +261,7 @@ What are the values of
 Give a property that `op` should satisfy to guarantee that `fold-right`
 and `fold-left` will produce the same values for any sequence.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (fold-right / 1 (list 1 2 3))
@@ -269,7 +281,9 @@ The results of `fold-right` and `fold-left` will be the same if `op`
 is communitative.
 
 <a name="Ex2.39"> </a>
-#### Exercise 2.39
+
+## Exercise 2.39
+
 Complete the following definitions of `reverse` in terms of
 `fold-right` and `fold-left`:
 
@@ -281,7 +295,7 @@ Complete the following definitions of `reverse` in terms of
     (fold-left (lambda (x y) <??>) '() sequence))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (reverse sequence)

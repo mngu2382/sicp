@@ -6,13 +6,15 @@ mathjax: true
 ---
 
 <a name="Ex2.40"> </a>
-#### Exercise 2.40
+
+## Exercise 2.40
+
 Define a procedure `unique-pairs` that, given an integer $n$,
 generates the sequence of pairs $(i, j)$ with $1\le j\lt i\le n$.
 Use `unique-pairs` to simplify the definition of `prime-sum-pairs`
 given above.
 
-##### Solution
+### Solution
 
 The following are defined in the text:
 
@@ -46,13 +48,14 @@ We define `unique-pairs` and redefine `prime-sum-pairs`
 {% endhighlight %}
 
 <a name="Ex2.41"> </a>
-#### Exercise 2.41
+
+## Exercise 2.41
 
 Write a procedure to find all ordered triples of positive integers
 $i$, $j$ and $k$ less that or equal to a given integer $n$ that sum to
 a given integer s.
 
-##### Solution
+### Solution
 
 Using `unique-pairs` from [Exercise 2.40](#Ex2.40) above, we define
 `unique-triple` as:
@@ -64,7 +67,8 @@ Using `unique-pairs` from [Exercise 2.40](#Ex2.40) above, we define
 {% endhighlight %}
 
 <a name="Ex2.42"> </a>
-#### Exercise 2.42
+
+## Exercise 2.42
 
 The "eight queens puzzle" asks how to place eight queens on a
 chessboard so that no queeds is in check from any other (i.e., no two
@@ -124,7 +128,7 @@ $k$-th column is safe with respect to the others. (Note that we need
 only check whether the new queen is safe -- the other queens are
 already guaranteed safe with respect to each other.)
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define empty-board '())
@@ -158,7 +162,8 @@ already guaranteed safe with respect to each other.)
 {% endhighlight %}
 
 <a name="Ex2.43"> </a>
-#### Exercise 2.43
+
+## Exercise 2.43
 
 Louis Reasoner is having a terrible time doing
 [Exercise 2.42](#Ex2.42). His `queens` procedure seems to work, but it
@@ -181,7 +186,7 @@ how long it will take Louis's program to solve the eight-queens puzzle,
 assuming that the program in [Exercise 2.42](#Ex2.42) solves the
 puzzle in time $T$.
 
-##### Solution
+### Solution
 
 In Louis's `flatmap` chunk above, to place the 8th queen, the
 expression `(queen-cols 7)`, which returns the collection of all

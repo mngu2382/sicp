@@ -6,7 +6,8 @@ mathjax: true
 ---
 
 <a name="Ex2.46"> </a>
-#### Exercise 2.46
+
+## Exercise 2.46
 
 A two-dimensional vector $\boldsymbol{v}$ running from the origin to a
 point to can be represented as a pair consisting of an $x$-coordinate
@@ -25,7 +26,7 @@ s\cdot(x,y) &= (sx,sy)
 \end{align}
 $$
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (make-vect x y)
@@ -51,7 +52,8 @@ $$
 {% endhighlight %}
 
 <a name="Ex2.47"> </a>
-#### Exercise 2.47
+
+## Exercise 2.47
 
 Here are two possible constructors for frames:
 
@@ -66,7 +68,7 @@ Here are two possible constructors for frames:
 For each constructor supply the appropriate selectors to produce an
 implementation for frames.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 ; the origin and edge1 selectors are common for both constructors

@@ -6,7 +6,9 @@ mathjax: true
 ---
 
 <a name="Ex2.7"> </a>
-#### Exercise 2.7
+
+## Exercise 2.7
+
 Alyssa's program is incomplete because she has not specified the
 implementation of the interval abstraction. Here is a definition of
 the interval constructor:
@@ -18,7 +20,7 @@ the interval constructor:
 Define selectors `upper-bound` and `lower-bound` to complete the
 implementation.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (upper-bound x)
@@ -29,12 +31,15 @@ implementation.
 {% endhighlight %}
 
 <a name="Ex2.8"> </a>
-#### Exercise 2.8
+
+## Exercise 2.8
+
 Using reasoning analogous to Alyssa's, decribe how the difference of
 two intervals may be computed. Define a corresponding subtraction
 procedure, called `sub-interval`.
 
-##### Solution
+### Solution
+
 Similar to `div-interval`, the difference of two intervals $x$ and $y$
 (that is, $x-y$) has an upper bound when the lower bound of $y$ is
 subtracted from the upper bound of $x$, and the lower bound is
@@ -48,7 +53,9 @@ bound of $x$.
 {% endhighlight %}
 
 <a name="Ex2.9"> </a>
-#### Exercise 2.9
+
+## Exercise 2.9
+
 The _width_ of an interval is half of the difference between its upper
 and lower bounds. The width is a measure of the uncertainty of the
 numbers specified by the interval. For some arithmetic operations the
@@ -59,7 +66,8 @@ width of the sum (or difference) of two intervals is a function only
 of the widths of the intervals being added (or subtracted). Give
 examples to show that this is not true for multiplication or divison.
 
-##### Solution
+### Solution
+
 For intervals $a=\[a_l,a_u\]$, $b=\[b_l,b_u\]$, let $c=a+b$ where
 
 $$
@@ -102,13 +110,16 @@ the width of $b$ remains the same
 {% endhighlight %}
 
 <a name="Ex2.10"> </a>
-#### Exercise 2.10
+
+## Exercise 2.10
+
 Ben Bitdiddle, an expert systems programmer, looks over Alyssa's
 shoulder and comments that it is not clear what it means to divide by
 an interval that spans zero. Modify Alyssa's code to check for this
 condition and to signal an error if it occurs.
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (div-interval x y)
     (if (> (* (lower-bound y) (upper-bound y)) 0)
@@ -119,18 +130,21 @@ condition and to signal an error if it occurs.
 {% endhighlight %}
 
 <a name="Ex2.11"> </a>
-#### Exercise 2.11
+
+## Exercise 2.11
+
 In passing, Ben also cryptically comments: "By testing the signs of
 the end points of the intervals, it is also possible to break
 `mul-interval` into nine cases, only one of which requires more than
 two multiplications". Rewrite this procedure using Ben's suggestion.
 
-##### Solution
+### Solution
+
 For a single interval there are three different configurations for the
 signs of the endpoints:
 
 $$
-\mathtt{\[- -\]}, \mathtt{\[- +\]}, \mathtt{\[+ +\]}
+\mathtt{[- -]}, \mathtt{[- +]}, \mathtt{[+ +]}
 $$
 
 The different combinations for a pair of intervals gives us the 9
@@ -173,7 +187,9 @@ _Tikz code for figure on [GitHub](https://github.com/mngu2382/sicp/blob/master/f
 {% endhighlight %}
 
 <a name="Ex2.12"> </a>
-#### Exercise 2.12
+
+## Exercise 2.12
+
 After debugging her program, Alyssa shows it to a potential user, who
 complains that her program solves the wrong problem. He wants a
 program that can deal with numbers represented as a center value and
@@ -205,7 +221,7 @@ define a selector `percent` that produces the percent tolerance for a
 given interval. The `center` selector is the same as the one shown
 above.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (make-center-percent c p)
@@ -216,13 +232,16 @@ above.
 {% endhighlight %}
 
 <a name="Ex2.13"> </a>
-#### Exercise 2.13
+
+## Exercise 2.13
+
 Show that under the assumption of small percentage tolerances there is
 a simple formula for the approximate percentage tolerance of the
 product of two intervals in terms of the tolerances of the fators. You
 may simplify the problem by assuming that all numbers are positive.
 
-##### Solution
+### Solution
+
 Let intervals be denoted by the pair $i=(i_c,i_p)$ where $i_c$ is the
 centre point of the interval and $i_p$ is the percentage tolerance of
 the interval. Given two intervals $a$ and $b$, if both intervals are
@@ -230,7 +249,7 @@ positive, we saw in [Exercise 2.11](#Ex2.11), the interval resulting
 from the product of $a$ and $b$
 
 $$
-\[a_lb_l,a_ub_u\]=\[a_c(1-a_p)b_c(1-b_p),a_c(1+a_p)b_c(1+b_p)\]
+[a_lb_l,a_ub_u]=[a_c(1-a_p)b_c(1-b_p),a_c(1+a_p)b_c(1+b_p)]
 $$
 
 where $a_l$, $a_u$ are the lower and upper bounds of $a$.
@@ -249,6 +268,7 @@ If we assume that $a_p$ and $b_p$ are small then $a_pb_p$ may be
 ignored to give an approximate percentage tolerance of $a_p+b_p$.
 
 <a name="Ex2.14"> </a>
+
 #### Exercise 2.14
 After considerable work, Alyssa P. Hacker delivers her finished system.
 Several years later, after she has forgotton all about it, she gets a
@@ -291,7 +311,8 @@ will get the most insight by using intervals whose width is a small
 percentage of the center value. Examine the results of the computation
 in center-percent form.
 
-##### Solution
+### Solution
+
 Demonstrating Lem's problem
 
 {% highlight scheme %}
@@ -334,7 +355,9 @@ For example:
 {% endhighlight %}
 
 <a name="Ex2.15"> </a>
-#### Exercise 2.15
+
+## Exercise 2.15
+
 Eva Lu Ator, another user, has also noticed the different intervals
 computed by different but algebraically equivalent expressions. She
 says that a formula to compute with intervals using Alyssa's system
@@ -343,14 +366,17 @@ that no variable that represents an uncertain number is repeated. Thus,
 she says, `par2` is a "better" program for parallel resistances than
 `par1`. Is she right? Why?
 
-##### Solution
+### Solution
+
 TODO
 
-#### Exercise 2.16
+## Exercise 2.16
+
 Explain, in general, why equivalent algebraic expressions may lead to
 different answers. Can you divise an interval-arithmetic package that
 does no have this shortcoming, or is this task impossible? (Warning:
 this problem is very difficult.)
 
-#### Solution
+### Solution
+
 TODO

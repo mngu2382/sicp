@@ -5,7 +5,6 @@ categories: chapter2
 ---
 
 <a name="Ex2.52"> </a>
-#### Exercise 2.52
 
 Make changes to the square limit of `wave` by working at each of the
 levels of abstraction. In particular:
@@ -21,5 +20,6 @@ levels of abstraction. In particular:
    you might make the big Mr. Rogers look outward from each corner of
    the square.)
 
-##### Solution
+### Solution
 
+TODO

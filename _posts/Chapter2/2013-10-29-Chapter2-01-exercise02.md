@@ -5,7 +5,9 @@ categories: chapter2
 ---
 
 <a name="Ex2.2"> </a>
-#### Exercise 2.2
+
+## Exercise 2.2
+
 Consider the problem of representing line segments in a plane. Each
 segement is represented as a pair of points: a starting point and an
 ending point. Define a constructor `make-segment` and selector
@@ -30,7 +32,7 @@ way to point points:
     (display ")"))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 ; segment constructor and selectors
@@ -75,7 +77,9 @@ An example:
 {% endhighlight %}
 
 <a name="Ex2.3"> </a>
-#### Exercise 2.3
+
+## Exercise 2.3
+
 Implement a representation for rectangles in a plane. (Hint: You might
 want to make use of [Exercise 2.2](#Ex2.2) .) In terms of your
 constructors and selectors, create procedures that compute the
@@ -84,7 +88,7 @@ representation for rectangles. Can you design your system with
 suitable abstraction barriers so that the same perimeter and area
 procedures will work using either representation?
 
-##### Solution
+### Solution
 The first represenation uses a corner, the length, the width and
 orientation to define the rectangle:
 

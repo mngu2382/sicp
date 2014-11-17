@@ -5,7 +5,9 @@ categories: chapter2
 ---
 
 <a name="Ex2.21"> </a>
-#### Exercise 2.21
+
+## Exercise 2.21
+
 The procedure `square-list` takes a list of numbers as arguments and
 returns a list of the square of those numbers.
 
@@ -27,7 +29,8 @@ them by filling in the missing expressions:
     (map <??> <??>))
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (square-list items)
     (if (null? items)
@@ -39,7 +42,9 @@ them by filling in the missing expressions:
 {% endhighlight %}
 
 <a name="Ex2.22"> </a>
-#### Exercise 2.22
+
+## Exercise 2.22
+
 Louise Reasoner tries to rewrite the first `sqaure-list` procedure of
 <a href="#Ex2.21">Exercise 2.21</a> so that it evolves an iterative
 process:
@@ -73,7 +78,8 @@ Louis then tries to fix this bug by interchanging the arguments to
 
 This doesn't work either. Explain.
 
-##### Solution
+### Solution
+
 In the first procedure the `car` of items is squared and
 _prepended_ to `answer`. This causes the list to be
 reversed.
@@ -84,7 +90,9 @@ value and `(cdr answer)` results in square of `(car items)`, that is,
 `answer` is nested the wrong way.
 
 <a name="Ex2.23"> </a>
-#### Exercise 2.23
+
+## Exercise 2.23
+
 The procedure `for-each` is similar to `map`. It takes as arguments a
 procedure and a list of elements. However, rather than forming a list
 of the results, `for-each` just applies the procedure to each of the
@@ -105,7 +113,8 @@ The value returned by the call to `for-each` (not illustrated above)
 can be something arbitrary, such as true. Give an implementation of
 `for-each`.
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define (for-each p ls)
     (if (null? ls)

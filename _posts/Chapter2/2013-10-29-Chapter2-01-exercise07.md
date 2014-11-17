@@ -5,7 +5,8 @@ categories: chapter2
 ---
 
 <a name="Ex2.24"> </a>
-#### Exercise 2.24
+
+## Exercise 2.24
 Suppose we evaluate the expression
 
 {% highlight scheme %}
@@ -15,7 +16,7 @@ Suppose we evaluate the expression
 Give the result printed by the interpreter, the corresponding
 box-and-pointer structure, and the interpretation of this as a tress.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (list 1 (list 2 (list 3 4)))
@@ -26,7 +27,9 @@ box-and-pointer structure, and the interpretation of this as a tress.
 ![Exercise 2.24: Tree representation]({{ site.baseurl }}/images/Ex2-24b.png "Exercise 2.24: Tree representation")
 
 <a name="Ex2.25"> </a>
-#### Exercise 2.25
+
+## Exercise 2.25
+
 Give combinations of `car`s and `cdr`s that will pick 7 from each of
 the following lists:
 
@@ -38,7 +41,8 @@ the following lists:
 (1 (2 (3 (4 (5 (6 7))))))
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (define x (list 1 3 (list 5 7) 9))
 (car (cdr (car (cdr (cdr x)))))
@@ -51,7 +55,9 @@ the following lists:
 {% endhighlight %}
 
 <a name="Ex2.26"> </a>
-#### Exercise 2.26
+
+## Exercise 2.26
+
 Suppose we define `x` and `y` to be  two lists:
 
 {% highlight scheme %}
@@ -71,7 +77,8 @@ each of the following expressions:
 (list x y)
 {% endhighlight %}
 
-##### Solution
+### Solution
+
 {% highlight scheme %}
 (append x y)
 ; (1 2 3 4 5 6)
@@ -84,7 +91,9 @@ each of the following expressions:
 {% endhighlight %}
 
 <a name="Ex2.27"> </a>
-#### Exercise 2.27
+
+## Exercise 2.27
+
 Modify your `reverse` procedure of
 [Exercise 2.18]({{ site.baseurl }}/chapter2/Chapter2-01-exercise05.html#Ex2.18)
 to produce a `deep-reverse` procedure that takes a list as argument
@@ -104,7 +113,7 @@ x
 ((4 3) (2 1))
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (deep-reverse items)
@@ -118,7 +127,9 @@ x
 {% endhighlight %}
 
 <a name="Ex2.28"> </a>
-#### Exercise 2.28
+
+## Exercise 2.28
+
 Write a procedure `fringe` that takes as argument a tree (represented
 as a list) and returns a list whose elements are all the leaves of the
 tree arranged in left-to-right order. For example
@@ -133,7 +144,7 @@ tree arranged in left-to-right order. For example
 ; (1 2 3 4 1 2 3 4)
 {% endhighlight %}
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (fringe items)
@@ -144,7 +155,9 @@ tree arranged in left-to-right order. For example
 {% endhighlight %}
 
 <a name="Ex2.29"> </a>
-#### Exercise 2.29
+
+## Exercise 2.29
+
 A binary mobile consists of two branches, a left branch and a right
 branch. Each branch is a rod of a certain length, from which hangs
 either a weight or another binary mobile. We can represent a binary
@@ -191,7 +204,7 @@ together with a `structure`, which may be wither a number
    How much do you need to change your program to convert to the new
    represenation?
 
-##### Solution
+### Solution
 
 The selectors for mobiles and branches:
 

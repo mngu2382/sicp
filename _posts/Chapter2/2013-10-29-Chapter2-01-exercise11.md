@@ -8,7 +8,7 @@ Define the procedure `up-split` used by `corner-split`. It is similar
 to `right-split`, except that is switches the roles of `below` and
 `beside`.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (up-split painter n)

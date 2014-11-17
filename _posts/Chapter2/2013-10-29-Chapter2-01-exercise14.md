@@ -5,7 +5,8 @@ categories: chapter2
 ---
 
 <a name="Ex2.48"> </a>
-#### Exercise 2.48
+
+## Exercise 2.48
 
 A directed line segment in the plane can be represented as a pair of
 vectors -- the vector running from the origin to the start-point of
@@ -15,7 +16,7 @@ of the segment. Use your vector representation from
 to define a representation for segments with a constructor
 `make-segment` and selectors `start-segment` and `end-segment`.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 (define (make-segment v1 v2)
@@ -29,7 +30,8 @@ to define a representation for segments with a constructor
 {% endhighlight %}
 
 <a name="Ex2.49"> </a>
-#### Exercise 2.49
+
+## Exercise 2.49
 
 Use `segments->painter` to define the following primitive painters:
 
@@ -40,7 +42,7 @@ Use `segments->painter` to define the following primitive painters:
    of the sides of the frame.
 4. The `wave` painter.
 
-##### Solution
+### Solution
 
 {% highlight scheme %}
 ; we define the corners of the frame (used for 1. and 2.)
