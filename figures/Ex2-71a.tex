@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[%
+  level distance=15mm, sibling distance=28mm,
+  level 2/.style={sibling distance=23mm},
+  level 3/.style={sibling distance=20mm},
+  level 4/.style={sibling distance=15mm},
+  every node/.style={rectangle, draw=black,
+     fill=gray!10, minimum size=6mm,
+     rounded corners=1mm,
+     font=\ttfamily\small,
+     inner xsep=0.3em}]
+
+\node {$\{x_0,x_1,x_2,x_3,x_4\}$ 31}
+  child {node {$x_4$ 16}}
+  child {node {$\{x_0,x_1,x_2,x_3\}$ 15}
+    child {node {$x_3$ 8}}
+    child {node {$\{x_0,x_1,x_2\}$ 7}
+      child {node {$x_2$ 4}}
+      child {node {$\{x_0,x_1\}$ 3}
+        child {node {$x_1$ 2}}
+        child {node {$x_0$ 1}}}}};
+\end{tikzpicture}
+\end{preview}
+\end{document}

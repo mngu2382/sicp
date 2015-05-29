@@ -1,0 +1,24 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex,active,tightpage]{preview}
+
+\setlength\PreviewBorder{1em} % use to add a border around the image
+
+\usepackage{tikz}
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[%
+  baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+  font=\tt, distance=12mm, sibling distance=16mm,
+  level 2/.style={sibling distance=10mm}]
+
+\node {5}
+  child {node {1}
+    child[missing]
+    child {node {3}}}
+  child {node {9}
+    child { node {7}}
+    child {node {11}}};
+\end{tikzpicture}
+\end{preview}
+\end{document}
